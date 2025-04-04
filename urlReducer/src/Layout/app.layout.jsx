@@ -8,7 +8,10 @@ function AppLayout() {
         <Outlet /> {/* This renders the child routes */}
       </main>
       <div>
-        <footer className="bg-amber-600 p-10 text-center mt-10">Footer Section</footer>
+        <footer className="bg-white text-black text-xl font-extrabold p-10 text-center mt-10">
+        © 2025 ShortEase. All Rights Reserved.
+        📧 Contact: support@shortease.com | 📍 Privacy Policy | 📜 Terms of Service
+        </footer>
       </div>
     </div>
   )

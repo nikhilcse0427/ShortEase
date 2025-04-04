@@ -9,6 +9,7 @@ import {DropdownMenu,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Link2, LogOut } from 'lucide-react';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Header = () => {
     <div>
       <nav className="py-2 flex justify-between items-center">
         <Link to="/">
-          <img src="../public/logo.png" className="h-28" alt="logoImg" />
+          <img src="../public/logo.png" className="h-42" alt="logoImg" />
         </Link>
         {!user?(
         <Button onClick={()=>navigate('/auth')}>Login</Button>
@@ -25,15 +26,21 @@ const Header = () => {
          <DropdownMenu>
          <DropdownMenuTrigger>
          <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarImage className="w-16 h-16" src="https://github.com/shadcn.png" />
+          {/* <AvatarFallback className="text-white font-bold w-16 h-16">CN</AvatarFallback> */}
          </Avatar>
          </DropdownMenuTrigger>
          <DropdownMenuContent>
          <DropdownMenuLabel>Nikhil Verma</DropdownMenuLabel>
          <DropdownMenuSeparator />
-         <DropdownMenuItem>My Links</DropdownMenuItem>
-         <DropdownMenuItem>Logout</DropdownMenuItem>
+         <DropdownMenuItem className="text-blue-600">
+          <Link2 className="mr-2 h-4 w-4" />
+          <span>My Links</span>
+          </DropdownMenuItem>
+         <DropdownMenuItem className="text-red-800">
+          <LogOut className="mr-2 h-4 w-4" />
+          <span>Logout</span>
+          </DropdownMenuItem>
          </DropdownMenuContent>
          </DropdownMenu>)
 }
