@@ -13,7 +13,7 @@ import { Link2, LogOut } from 'lucide-react';
 
 const Header = () => {
   const navigate = useNavigate();
-  const user = true;
+  const user = false;
   return (
     <div>
       <nav className="py-2 flex justify-between items-center">
